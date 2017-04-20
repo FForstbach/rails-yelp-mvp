@@ -1,0 +1,10 @@
+<div class="container text-center">
+  <h1>Restaurant#new</h1>
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, :collection => [["Chinese", "chinese"], ["Italian", "italian"], ["Japanese", "japanese"], ["French","french"],["Belgian", "belgian"]] %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

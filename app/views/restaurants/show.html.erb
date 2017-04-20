@@ -1,0 +1,11 @@
+<div class="container text-center">
+<h1><%= @restaurant.name %></h1>
+<p><%= "Phone Number: #{@restaurant.phone_number}" %></p>
+<p><%= "Address: #{@restaurant.address}" %></p>
+<p><%= "Cuisine: #{@restaurant.category.capitalize}" %></p>
+<h3>Reviews</h3>
+<%= link_to "Show Reviews", restaurant_reviews_path(@restaurant) %>
+<br>
+<%= link_to "Show All Restaurants", restaurants_path %>
+
+</div>

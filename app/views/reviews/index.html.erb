@@ -1,0 +1,25 @@
+<div class="container text-center">
+<h1><%= "Review for #{@restaurant.name}" %></h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <td><strong>Comment</strong></td>
+        <td><strong>Rating</strong></td>
+      </tr>
+
+    </thead>
+    <tbody>
+        <% @reviews.each do |review| %>
+          <tr>
+            <td><%= review.content %></td>
+            <td><%= "#{review.rating}" %></td>
+          </tr>
+        <% end %>
+    </tbody>
+  </table>
+  <%= link_to "Create new review", new_restaurant_review_path %>
+  <br>
+  <%= link_to "Go Back To Restaurant \"#{@restaurant.name}\"", restaurant_path(@restaurant) %>
+</div>
+
+
